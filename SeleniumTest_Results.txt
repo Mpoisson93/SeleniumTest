@@ -1,0 +1,16 @@
+$ bin/behat
+Feature: Homepage Privacy Policy Test
+    In order to accomplish the mequilibrium test
+    I need to see the homepage privacy page
+
+  Scenario: Check privacy content                 # features\homepage.feature:5
+      Given: I have a web browser
+    When I load the homepage                      # FeatureContext::iLoadTheHomepage()
+    Then I should see "privacy"                   # FeatureContext::iShouldSee()
+    And I should see a "PRIVACY [UPDATED]" link   # FeatureContext::iShouldSeeALink()
+    And I click the "PRIVACY [UPDATED]" link      # FeatureContext::iClickTheLink()
+    And I should see "Last Updated: May 24, 2018" # FeatureContext::iShouldSee()
+
+1 scenario (1 passed)
+5 steps (5 passed)
+0m13.08]]s (8.10Mb)
